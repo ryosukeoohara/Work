@@ -1,11 +1,10 @@
 //===========================================================
 //
-//ポリゴンを出すやつ[particl.cpp]
-//Author 大原怜将
+// パーティクル処理[particl.cpp]
+// Author 大原怜将
 //
 //===========================================================
 #include "main.h"
-#include "bg.h"
 #include "renderer.h"
 #include "object.h"
 #include "manager.h"

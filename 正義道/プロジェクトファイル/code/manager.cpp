@@ -1,7 +1,7 @@
 //===========================================================
 //
-//ポリゴンを出すやつ[manager.cpp]
-//Author 大原怜将
+// マネージャ処理[manager.cpp]
+// Author 大原怜将
 //
 //===========================================================
 #include "renderer.h"
@@ -9,7 +9,6 @@
 #include "object2D.h"
 #include "manager.h"
 #include "player.h"
-#include "bg.h"
 #include "input.h"
 #include "sound.h"
 #include "bullet.h"
@@ -18,11 +17,9 @@
 #include "enemyBoss.h"
 #include "enemyweak.h"
 #include "input.h"
-#include "multiplexbg.h"
 #include "effect.h"
 #include "time.h"
 #include "score.h"
-#include "block.h"
 #include "debugproc.h"
 #include "item.h"
 #include "camera.h"
@@ -33,7 +30,6 @@
 #include "texture.h"
 #include "field.h"
 #include "collision.h"
-#include "edit.h"
 #include "map.h"
 #include "model.h"
 #include "frame.h"

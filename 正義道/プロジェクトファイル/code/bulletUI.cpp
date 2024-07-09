@@ -1,7 +1,7 @@
 //===========================================================
 //
-//ポリゴンを出すやつ[itemslot.cpp]
-//Author 大原怜将
+// バレットのUI処理[bulletUI.cpp]
+// Author 大原怜将
 //
 //===========================================================
 #include "bulletUI.h"
@@ -16,12 +16,12 @@
 #include "player.h"
 
 //===========================================================
-//静的メンバ変数
+// 静的メンバ変数
 //===========================================================
 CNumber *CBulletUI::m_apNumber[MAX_NUMBER] = {};
 
 //===========================================================
-//コンストラクタ
+// コンストラクタ
 //===========================================================
 CBulletUI::CBulletUI()
 {
@@ -29,7 +29,7 @@ CBulletUI::CBulletUI()
 }
 
 //===========================================================
-//コンストラクタ(オーバーロード)
+// コンストラクタ(オーバーロード)
 //===========================================================
 CBulletUI::CBulletUI(D3DXVECTOR3 pos)
 {
@@ -37,7 +37,7 @@ CBulletUI::CBulletUI(D3DXVECTOR3 pos)
 }
 
 //===========================================================
-//デストラクタ
+// デストラクタ
 //===========================================================
 CBulletUI::~CBulletUI()
 {
@@ -45,16 +45,13 @@ CBulletUI::~CBulletUI()
 }
 
 //===========================================================
-//クリエイト
+// 生成処理
 //===========================================================
 CBulletUI *CBulletUI::Create(D3DXVECTOR3 pos)
 {
-	CBulletUI *pTitlelogo = NULL;
+	CBulletUI *pTitlelogo = nullptr;
 
-	//テクスチャの情報取得
-	CTexture *pTexture = CManager::GetTexture();
-
-	if (pTitlelogo == NULL)
+	if (pTitlelogo == nullptr)
 	{
 		pTitlelogo = new CBulletUI(pos);
 
@@ -65,7 +62,7 @@ CBulletUI *CBulletUI::Create(D3DXVECTOR3 pos)
 }
 
 //===========================================================
-//初期化処理
+// 初期化処理
 //===========================================================
 HRESULT CBulletUI::Init(void)
 {
@@ -76,13 +73,13 @@ HRESULT CBulletUI::Init(void)
 
 	for (int nCount = 0; nCount < MAX_NUMBER; nCount++)
 	{
-		if (m_apNumber[nCount] == NULL)
+		if (m_apNumber[nCount] == nullptr)
 		{
 			m_apNumber[nCount] = CNumber::Create({ 1090.0f + 50.0f * nCount, 400.0f, 0.0f });
 
 			m_apNumber[nCount]->SetNumberType(CNumber::TYPENUMBER_DESTROYCOUNTER);
 
-			//初期化処理
+			// 初期化処理
 			m_apNumber[nCount]->Init();
 
 			m_apNumber[nCount]->m_Number = 0;
@@ -96,7 +93,7 @@ HRESULT CBulletUI::Init(void)
 }
 
 //===========================================================
-//終了処理
+// 終了処理
 //===========================================================
 void CBulletUI::Uninit(void)
 {
@@ -105,38 +102,41 @@ void CBulletUI::Uninit(void)
 
 	for (int nCount = 0; nCount < MAX_NUMBER; nCount++)
 	{
-		if (m_apNumber[nCount] != NULL)
+		if (m_apNumber[nCount] != nullptr)
 		{
 			//終了処理
 			m_apNumber[nCount]->Uninit();
 
-			m_apNumber[nCount] = NULL;
+			m_apNumber[nCount] = nullptr;
 		}
 	}
 }
 
 //===========================================================
-//更新処理
+// 更新処理
 //===========================================================
 void CBulletUI::Update(void)
 {
 	CPlayer *pPlayer = CGame::GetPlayer();
 
-	int n = pPlayer->GetRestBullet();
+	int nNum = 0;
+
+	if(pPlayer != nullptr)
+	   nNum = pPlayer->GetRestBullet();
 
 	D3DXVECTOR3 pos = Getpos();
 
-	//更新処理
+	// 更新処理
 	CObject2D::Update();
 
 	CObject2D::SetVtxTitleLogo(pos, 100.0f, 25.0f);
 
 	for (int nCount = 0; nCount < MAX_NUMBER; nCount++)
 	{
-		if (m_apNumber[nCount] != NULL)
+		if (m_apNumber[nCount] != nullptr)
 		{
 			m_apNumber[0]->m_Number = 0;
-			m_apNumber[1]->m_Number = n;
+			m_apNumber[1]->m_Number = nNum;
 
 			//更新処理
 			m_apNumber[nCount]->SetVtxCounter({ 200.0f + 30.0f * nCount, 400.0f, 0.0f }, 15.0f, 20.0f);
@@ -145,7 +145,7 @@ void CBulletUI::Update(void)
 }
 
 //===========================================================
-//描画処理
+// 描画処理
 //===========================================================
 void CBulletUI::Draw(void)
 {
@@ -153,6 +153,6 @@ void CBulletUI::Draw(void)
 	CRenderer *pRenderer = CManager::GetRenderer();
 	LPDIRECT3DDEVICE9 pDevice = pRenderer->GetDevice();
 
-	//描画処理
+	// 描画処理
 	CObject2D::Draw();
 }

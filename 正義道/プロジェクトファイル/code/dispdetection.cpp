@@ -1,29 +1,31 @@
 //===========================================================
 //
-//ポリゴンを出すやつ[bg.cpp]
-//Author 大原怜将
+// ポリゴンを出すやつ[dispdetection.cpp]
+// Author 大原怜将
 //
 //===========================================================
-#include "main.h"
 #include "renderer.h"
 #include "manager.h"
 #include "dispdetection.h"
 #include "texture.h"
-#include "input.h"
-#include "game.h"
 
-//マクロ定義
-#define HEIGHT   (100.0f)  //高さ
-#define WIDHT    (100.0f)  //横
-#define MOVE     (100.0f) //移動
+//===========================================================
+// 定数定義
+//===========================================================
+namespace
+{
+	const float HEIGHT = 100.0f;  // 高さ
+	const float WIDHT = 100.0f;   // 横幅
+	const char* TEX_NAME = "data\\TEXTURE\\redcircle.png";
+}
 
 //================================================================
-//静的メンバ変数宣言
+// 静的メンバ変数宣言
 //================================================================
 CDISPDETECTION *CDISPDETECTION::m_DispDetection = NULL;
 
 //================================================================
-//コンストラクタ
+// コンストラクタ
 //================================================================
 CDISPDETECTION::CDISPDETECTION()
 {
@@ -32,7 +34,7 @@ CDISPDETECTION::CDISPDETECTION()
 }
 
 //================================================================
-//コンストラクタ
+// コンストラクタ
 //================================================================
 CDISPDETECTION::CDISPDETECTION(D3DXVECTOR3 pos)
 {
@@ -42,7 +44,7 @@ CDISPDETECTION::CDISPDETECTION(D3DXVECTOR3 pos)
 }
 
 //================================================================
-//デストラクタ
+// デストラクタ
 //================================================================
 CDISPDETECTION::~CDISPDETECTION()
 {
@@ -50,7 +52,7 @@ CDISPDETECTION::~CDISPDETECTION()
 }
 
 //================================================================
-//生成処理
+// 生成処理
 //================================================================
 CDISPDETECTION *CDISPDETECTION::Create(D3DXVECTOR3 pos)
 {
@@ -67,8 +69,6 @@ CDISPDETECTION *CDISPDETECTION::Create(D3DXVECTOR3 pos)
 			//オブジェクト2Dの生成
 			pFrame = new CDISPDETECTION(pos);
 
-			pFrame->m_nIdxTexture = pTexture->Regist("data\\TEXTURE\\redcircle.png");
-
 			//初期化処理
 			pFrame->Init();
 
@@ -80,12 +80,14 @@ CDISPDETECTION *CDISPDETECTION::Create(D3DXVECTOR3 pos)
 }
 
 //================================================================
-//ポリゴンの初期化処理
+// 初期化処理
 //================================================================
 HRESULT CDISPDETECTION::Init(void)
 {
 	//テクスチャの情報取得
 	CTexture *pTexture = CManager::GetTexture();
+
+	m_nIdxTexture = pTexture->Regist(TEX_NAME);
 
 	CObject3D::Init();
 
@@ -93,7 +95,7 @@ HRESULT CDISPDETECTION::Init(void)
 }
 
 //================================================================
-//ポリゴンの終了処理
+// 終了処理
 //================================================================
 void CDISPDETECTION::Uninit(void)
 {
@@ -101,7 +103,7 @@ void CDISPDETECTION::Uninit(void)
 }
 
 //================================================================
-//ポリゴンの更新処理
+// 更新処理
 //================================================================
 void CDISPDETECTION::Update(void)
 {
@@ -115,13 +117,16 @@ void CDISPDETECTION::Update(void)
 }
 
 //================================================================
-//ポリゴンの描画処理
+// 描画処理
 //================================================================
 void CDISPDETECTION::Draw(void)
 {
 	CTexture *pTexture = CManager::GetTexture();
 	CRenderer *pRenderer = CManager::GetRenderer();
 	LPDIRECT3DDEVICE9 pDevice = pRenderer->GetDevice();
+
+	if (pTexture == nullptr || pRenderer == nullptr || pDevice == nullptr)
+		return;
 
 	pDevice->SetTexture(0, pTexture->GetAddress(m_nIdxTexture));
 

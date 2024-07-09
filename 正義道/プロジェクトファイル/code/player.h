@@ -1,7 +1,7 @@
 //===========================================================
 //
-//ポリゴンを出すやつ[player.h]
-//Author 大原怜将
+// プレイヤー処理[player.h]
+// Author 大原怜将
 //
 //===========================================================
 #ifndef _PLAYER_H_             //このマクロ定義がされてなかったら
@@ -18,10 +18,11 @@ class CEnemy;
 
 //マクロ定義
 #define PLAYERMOVE   (1.0f)
+#define MAX_PRATS    (128)
 
-
-
-//プレイヤークラス
+//===========================================================
+// クラス定義
+//===========================================================
 class CPlayer : public CObject
 {
 public:
@@ -33,46 +34,46 @@ public:
 	typedef enum
 	{
 		STATE_NONE = 0,
-		STATE_NEUTRAL,                //待機
-		STATE_DAMEGE,                 //ダメージ
-		STATE_MOVE,                   //移動
-		STATE_STAGGER,                //くらい
-		STATE_AVOI,                   //回避
-		STATE_ACTION,                 //攻撃(近距離)
-		STATE_ACTIONNEUTAL,           //攻撃待機(近距離)
-		STATE_SNPSTAN,                //攻撃回避(遠距離) 
-		STATE_SNP,                    //攻撃(遠距離)
-		STATE_KNIFESTAN,              //攻撃待機(ナイフ)
-		STATE_KNIFEAC,                //攻撃(ナイフ)
-		STATE_CONSECAC,               //連撃
-		STATE_CONSECACSEC,            //連撃二撃
-		STATE_CONSECACTHI,            //連撃三撃
-		STATE_DEATH,                  //死んだ
-		STATE_END,                    //終了
-		STATE_TUTOMOVE,               //チュートリアルの移動
+		STATE_NEUTRAL,                // 待機
+		STATE_DAMEGE,                 // ダメージ
+		STATE_MOVE,                   // 移動
+		STATE_STAGGER,                // くらい
+		STATE_AVOI,                   // 回避
+		STATE_ACTION,                 // 攻撃(近距離)
+		STATE_ACTIONNEUTAL,           // 攻撃待機(近距離)
+		STATE_SNPSTAN,                // 攻撃回避(遠距離) 
+		STATE_SNP,                    // 攻撃(遠距離)
+		STATE_KNIFESTAN,              // 攻撃待機(ナイフ)
+		STATE_KNIFEAC,                // 攻撃(ナイフ)
+		STATE_CONSECAC,               // 連撃
+		STATE_CONSECACSEC,            // 連撃二撃
+		STATE_CONSECACTHI,            // 連撃三撃
+		STATE_DEATH,                  // 死んだ
+		STATE_END,                    // 終了
+		STATE_TUTOMOVE,               // チュートリアルの移動
 		STATE_MAX
 	} STATE;
 
 	//モーション
 	typedef enum
 	{
-		MOTIONTYPE_NONE = 0,                 //なし
-		MOTIONTYPE_MOVE,                     //移動
-		MOTIONTYPE_ACTION,                   //攻撃
-		MOTIONTYPE_ACTIONNEUTAL,             //ニュートラル
-		MOTIONTYPE_SNPSTAN,                  //射撃待ち
-		MOTIONTYPE_SNP,                      //射撃
-		MOTIONTYPE_KNIFESTAN,                //ナイフ構え
-		MOTIONTYPE_KNIFEAC,                  //ナイフで攻撃
-		MOTIONTYPE_ACFRIST,                  //攻撃の一段目
-		MOTIONTYPE_ACSECOND,                 //攻撃の二段目
-		MOTIONTYPE_ACTHIRD,                  //攻撃の三段目
-		MOTIONTYPE_DAMEGE,                   //くらいモーション
-		MOTIONTYPE_AVOI,                     //回避
-		MOTIONTYPE_BATNEUTAL,                //バットを持っているときのニュートラル
-		MOTIONTYPE_BATMOVE,                  //バットを持っているときの移動
-		MOTIONTYPE_BATACTION,                //バットを持っているときの攻撃
-		MOTIONTYPE_DEATH,                    //死亡
+		MOTIONTYPE_NONE = 0,                 // なし
+		MOTIONTYPE_MOVE,                     // 移動
+		MOTIONTYPE_ACTION,                   // 攻撃
+		MOTIONTYPE_ACTIONNEUTAL,             // ニュートラル
+		MOTIONTYPE_SNPSTAN,                  // 射撃待ち
+		MOTIONTYPE_SNP,                      // 射撃
+		MOTIONTYPE_KNIFESTAN,                // ナイフ構え
+		MOTIONTYPE_KNIFEAC,                  // ナイフで攻撃
+		MOTIONTYPE_ACFRIST,                  // 攻撃の一段目
+		MOTIONTYPE_ACSECOND,                 // 攻撃の二段目
+		MOTIONTYPE_ACTHIRD,                  // 攻撃の三段目
+		MOTIONTYPE_DAMEGE,                   // くらいモーション
+		MOTIONTYPE_AVOI,                     // 回避
+		MOTIONTYPE_BATNEUTAL,                // バットを持っているときのニュートラル
+		MOTIONTYPE_BATMOVE,                  // バットを持っているときの移動
+		MOTIONTYPE_BATACTION,                // バットを持っているときの攻撃
+		MOTIONTYPE_DEATH,                    // 死亡
 		MOTIONTYPE_MAX
 	} MOTIONTYPE;
 
@@ -95,10 +96,10 @@ public:
 	};
 
 
-	HRESULT Init(void);      //プレイヤーの初期化処理    
-	void Uninit(void);       //プレイヤーの終了処理
-	void Update(void);       //プレイヤーの更新処理
-	void Draw(void);         //プレイヤーの描画処理
+	HRESULT Init(void);      // 初期化処理    
+	void Uninit(void);       // 終了処理
+	void Update(void);       // 更新処理
+	void Draw(void);         // 描画処理
 
 	static CPlayer *Create(D3DXVECTOR3 pos);  //生成
 	//static CPlayer *GetPlayer(void) { return m_Player; };

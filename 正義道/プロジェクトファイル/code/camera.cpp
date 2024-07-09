@@ -1,10 +1,9 @@
-//=============================================================================
+//===============================================================
 //
 // カメラ処理 [camera.cpp]
 // Author : 大原　怜将
 //
-//=============================================================================
-#include "main.h"
+//===============================================================
 #include "camera.h"
 #include "renderer.h"
 #include "manager.h"
@@ -17,11 +16,16 @@
 #include "effectline.h"
 #include "frame.h"
 
-//マクロ定義
-#define CAMERA_DISTNCE    (300.0f)
-#define CAMERA_ROTY       (0.03f)
-#define CAMERA_MOVE       (2.0f)
-#define CAMERA_LOWMOVE    (0.1f)
+//===============================================================
+// 定数定義
+//===============================================================
+namespace
+{
+	const float DISTNCE = 300.0f;
+	const float ROT_Y = 0.03f;
+	const float MOVE = 2.0f;
+	const float LOWMOVE = 0.1f;
+}
 
 //================================================================
 //コンストラクタ
@@ -227,8 +231,8 @@ void CCamera::CameraV(void)
 		m_rot.y += D3DX_PI * 2.0f;
 	}
 
-	m_posV.x = m_posR.x - sinf(m_rot.y) * -CAMERA_DISTNCE;
-	m_posV.z = m_posR.z - cosf(m_rot.y) * -CAMERA_DISTNCE;
+	m_posV.x = m_posR.x - sinf(m_rot.y) * -DISTNCE;
+	m_posV.z = m_posR.z - cosf(m_rot.y) * -DISTNCE;
 
 	if (pPlayer != NULL)
 	{
@@ -264,8 +268,8 @@ void CCamera::CameraR(void)
 
 	m_rot.z += MousePos.y * 0.005f;
 
-	m_posR.x = m_posV.x - sinf(m_rot.y) * CAMERA_DISTNCE;
-	m_posR.z = m_posV.z - cosf(m_rot.y) * CAMERA_DISTNCE;
+	m_posR.x = m_posV.x - sinf(m_rot.y) * DISTNCE;
+	m_posR.z = m_posV.z - cosf(m_rot.y) * DISTNCE;
 }
 
 //================================================================
@@ -282,8 +286,8 @@ void CCamera::Title(void)
 		m_rot.y += D3DX_PI * 2.0f;
 	}
 
-	m_posV.x = m_posR.x - sinf(m_rot.y) * -CAMERA_DISTNCE;
-	m_posV.z = m_posR.z - cosf(m_rot.y) * -CAMERA_DISTNCE;
+	m_posV.x = m_posR.x - sinf(m_rot.y) * -DISTNCE;
+	m_posV.z = m_posR.z - cosf(m_rot.y) * -DISTNCE;
 
 	m_posV = D3DXVECTOR3(0.0f + m_posV.x, 10.0f, 0.0f + m_posV.z);
 	m_posR = D3DXVECTOR3(0.0f, 70.0f, 50.0f);

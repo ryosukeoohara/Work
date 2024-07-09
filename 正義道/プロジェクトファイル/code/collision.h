@@ -10,7 +10,7 @@
 #include "item.h"
 
 //=============
-//前方宣言
+// 前方宣言
 //=============
 class CEnemyWeak;
 class CEnemyBoss;
@@ -20,7 +20,9 @@ class CBullet;
 class CObjectX;
 
 
-//コリジョンクラス
+//===============================================================
+// クラス定義
+//===============================================================
 class CCollision
 {
 public:
@@ -30,7 +32,6 @@ public:
 	HRESULT Init(void);
 	void Uninit(void);
 
-	bool CollsionEnemy(D3DXVECTOR3 *pos, D3DXVECTOR3 *posOld, float fWidthX, float fWidthZ, CEnemy *pEnemy);  //敵との当たり判定(プレイヤー基準)
 	bool CollisionBulletEnemy(D3DXVECTOR3 *pos, float fWidthX, float fWidthZ, CEnemy **pEnemy);     //弾との当たり判定
 	bool CollisionBulletPlayer(D3DXVECTOR3 *pos, float fWidthX, float fWidthZ, CPlayer *pPlayer);  //弾との当たり判定
 	bool CollisionPunch(D3DXVECTOR3 *pos, float fWidthX, float fWidthZ);  //敵とこぶしの当たり判定

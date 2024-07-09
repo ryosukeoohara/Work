@@ -1,7 +1,7 @@
 //===========================================================
 //
-//ポリゴンを出すやつ[enemy.cpp]
-//Author 大原怜将
+// ザコ敵の処理[enemyweak.cpp]
+// Author 大原怜将
 //
 //===========================================================
 #include "main.h"
@@ -19,7 +19,6 @@
 #include "collision.h"
 #include "debugproc.h"
 #include "item.h"
-#include "message.h"
 #include "game.h"
 #include "enemymanager.h"
 #include "score.h"

@@ -1,14 +1,13 @@
 //===========================================================
 //
-//ポリゴンを出すやつ[object2D.cpp]
-//Author 大原怜将
+// オブジェクト2D処理[object2D.cpp]
+// Author 大原怜将
 //
 //===========================================================
 #include "object.h"
 #include "object2D.h"
 #include "renderer.h"
 #include "manager.h"
-#include "multiplexbg.h"
 #include "effect.h"
 #include "texture.h"
 

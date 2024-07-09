@@ -12,6 +12,9 @@
 
 #define MAX_NUMBER     (2)
 
+//===============================================================
+// クラス定義
+//===============================================================
 class CBulletUI : public CObject2D
 {
 public:
@@ -31,9 +34,9 @@ public:
 
 private:
 	static CBulletUI *m_TutorialUI;
-	int m_nIdxTexture;                          //テクスチャのインデックス番号
-	static CNumber *m_apNumber[MAX_NUMBER];		  //ナンバーへのポインタ
-	TYPE m_type;                                //種類
+	int m_nIdxTexture;                          // テクスチャのインデックス番号
+	static CNumber *m_apNumber[MAX_NUMBER];		// ナンバーへのポインタ
+	TYPE m_type;                                // 種類
 };
 
 #endif

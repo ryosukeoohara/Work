@@ -10,12 +10,12 @@
 #include<string.h>
 
 //================================================================
-//静的メンバ変数
+// 静的メンバ変数
 //================================================================
 int CTexture::m_nNumAll = 0;
 
 //================================================================
-//コンストラクタ
+// コンストラクタ
 //================================================================
 CTexture::CTexture()
 {
@@ -23,7 +23,7 @@ CTexture::CTexture()
 }
 
 //================================================================
-//デストラクタ
+// デストラクタ
 //================================================================
 CTexture::~CTexture()
 {
@@ -31,7 +31,7 @@ CTexture::~CTexture()
 }
 
 //================================================================
-//初期化処理
+// 初期化処理
 //================================================================
 HRESULT CTexture::Load(void)
 {
@@ -44,7 +44,7 @@ HRESULT CTexture::Load(void)
 }
 
 //================================================================
-//終了処理
+// 終了処理
 //================================================================
 void CTexture::UnLoad(void)
 {
@@ -60,13 +60,16 @@ void CTexture::UnLoad(void)
 }
 
 //================================================================
-//指定のテクスチャ読み込み
+// 指定のテクスチャ読み込み
 //================================================================
 int CTexture::Regist(const char *pFilename)
 {
 	//デバイスを取得
 	CRenderer *pRenderer = CManager::GetRenderer();
-	LPDIRECT3DDEVICE9 pDevice = pRenderer->GetDevice();
+	LPDIRECT3DDEVICE9 pDevice = nullptr;
+
+	if(pRenderer != nullptr)
+	   pDevice = pRenderer->GetDevice();
 
 	int nIdx = m_nNumAll;
 
@@ -78,22 +81,22 @@ int CTexture::Regist(const char *pFilename)
 		}
 	}
 
-	if (m_aTexture[nIdx].m_pTexture == NULL)
-	{//使用されていなかったら
+	if (m_aTexture[nIdx].m_pTexture == nullptr)
+	{// 使用されていなかったら
 
 		strcpy(m_aTexture[nIdx].aName, pFilename);
 
 		//テクスチャの読み込み
 		D3DXCreateTextureFromFile(pDevice, m_aTexture[nIdx].aName, &m_aTexture[nIdx].m_pTexture);
 
-		m_nNumAll++;  //テクスチャの総数をカウントアップ
+		m_nNumAll++;  // テクスチャの総数をカウントアップ
 	}
 	
 	return nIdx;
 }
 
 //================================================================
-//テクスチャのアドレス取得
+// テクスチャのアドレス取得
 //================================================================
 LPDIRECT3DTEXTURE9 CTexture::GetAddress(int nIdx)
 {
@@ -103,6 +106,6 @@ LPDIRECT3DTEXTURE9 CTexture::GetAddress(int nIdx)
 	}
 	else
 	{
-		return NULL;
+		return nullptr;
 	}
 }

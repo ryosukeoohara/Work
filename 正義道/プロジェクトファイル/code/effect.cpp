@@ -1,11 +1,10 @@
 //===========================================================
 //
-//ポリゴンを出すやつ[effect.cpp]
-//Author 大原怜将
+// エフェクト処理[effect.cpp]
+// Author 大原怜将
 //
 //===========================================================
 #include "main.h"
-#include "bg.h"
 #include "renderer.h"
 #include "object.h"
 #include "manager.h"
@@ -17,9 +16,6 @@
 //静的メンバ変数宣言
 //================================================================
 LPDIRECT3DTEXTURE9 CEffect::m_pTexture = NULL;
-//struct CEffect::Effect CEffect::m_effect;
-//float CEffect::m_fRadius = 0.0f;
-//D3DXCOLOR CEffect::m_col = { 0.0f,0.0f,0.0f,0.0f };
 
 //================================================================
 //コンストラクタ

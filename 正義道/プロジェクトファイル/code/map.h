@@ -1,7 +1,7 @@
 //===========================================================
 //
-//ポリゴンを出すやつ[map.h]
-//Author 大原怜将
+// マップ処理[map.h]
+// Author 大原怜将
 //
 //===========================================================
 #ifndef _MAP_H_             //このマクロ定義がされてなかったら
@@ -12,7 +12,9 @@
 //マクロ定義
 #define MAX_MODEL    (1024)
 
-//プレイヤークラス
+//===========================================================
+// クラス定義
+//===========================================================
 class CMap : public CObject
 {
 public:
@@ -26,7 +28,7 @@ public:
 
 	void ReadText(void);  //外部ファイル読み込み
 
-	typedef struct
+	struct MODEL
 	{
 		char m_filename[256] = {};
 		int m_nIdx;                         //モデルのインデックス番号
@@ -50,7 +52,7 @@ public:
 		void SetRot(D3DXVECTOR3 rot) { m_rot = rot; }
 		D3DXVECTOR3 GetRot(void) { return m_rot; }
 
-	} MODEL;
+	};
 
 	static CObjectX **GetX(void) { return &m_apModel[0]; }   //マップモデルを取得
 	int GetnNumAll(void) { return m_nNumAll; }        //総数を取得

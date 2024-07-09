@@ -22,32 +22,32 @@
     <ProjectGuid>{CE30B497-D9FF-4507-9933-120930B48A87}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>sample003</RootNamespace>
-    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
@@ -151,152 +151,141 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="bg.cpp" />
-    <ClCompile Include="billboard.cpp" />
-    <ClCompile Include="block.cpp" />
-    <ClCompile Include="bullet.cpp" />
-    <ClCompile Include="bulletUI.cpp" />
-    <ClCompile Include="camera.cpp" />
-    <ClCompile Include="character.cpp" />
-    <ClCompile Include="collision.cpp" />
-    <ClCompile Include="debugproc.cpp" />
-    <ClCompile Include="dispdetection.cpp" />
-    <ClCompile Include="displife.cpp" />
-    <ClCompile Include="edit.cpp" />
-    <ClCompile Include="effect.cpp" />
-    <ClCompile Include="effectline.cpp" />
-    <ClCompile Include="effectsord.cpp" />
-    <ClCompile Include="enemy.cpp" />
-    <ClCompile Include="enemyBoss.cpp" />
-    <ClCompile Include="enemymanager.cpp" />
-    <ClCompile Include="enemymedBoss.cpp" />
-    <ClCompile Include="enemyweak.cpp" />
-    <ClCompile Include="explosion.cpp" />
-    <ClCompile Include="fade.cpp" />
-    <ClCompile Include="field.cpp" />
-    <ClCompile Include="frame.cpp" />
-    <ClCompile Include="game.cpp" />
-    <ClCompile Include="gameUI.cpp" />
-    <ClCompile Include="icon.cpp" />
-    <ClCompile Include="impact.cpp" />
-    <ClCompile Include="input.cpp" />
-    <ClCompile Include="item.cpp" />
-    <ClCompile Include="itemicon.cpp" />
-    <ClCompile Include="itemslot.cpp" />
-    <ClCompile Include="life.cpp" />
-    <ClCompile Include="lifegage.cpp" />
-    <ClCompile Include="light.cpp" />
-    <ClCompile Include="main.cpp" />
-    <ClCompile Include="manager.cpp" />
-    <ClCompile Include="map.cpp" />
-    <ClCompile Include="message.cpp" />
-    <ClCompile Include="model.cpp" />
-    <ClCompile Include="motion.cpp" />
-    <ClCompile Include="multiplexbg.cpp" />
-    <ClCompile Include="number.cpp" />
-    <ClCompile Include="object.cpp" />
-    <ClCompile Include="object2D.cpp" />
-    <ClCompile Include="object3D.cpp" />
-    <ClCompile Include="objectMesh.cpp" />
-    <ClCompile Include="objectX.cpp" />
-    <ClCompile Include="particl.cpp" />
-    <ClCompile Include="pause.cpp" />
-    <ClCompile Include="player.cpp" />
-    <ClCompile Include="police.cpp" />
-    <ClCompile Include="ranking.cpp" />
-    <ClCompile Include="rankinglogo.cpp" />
-    <ClCompile Include="renderer.cpp" />
-    <ClCompile Include="result.cpp" />
-    <ClCompile Include="score.cpp" />
-    <ClCompile Include="shadow.cpp" />
-    <ClCompile Include="sky.cpp" />
-    <ClCompile Include="slot.cpp" />
-    <ClCompile Include="sound.cpp" />
-    <ClCompile Include="target.cpp" />
-    <ClCompile Include="texture.cpp" />
-    <ClCompile Include="time.cpp" />
-    <ClCompile Include="title.cpp" />
-    <ClCompile Include="titlelogo.cpp" />
-    <ClCompile Include="titleUI.cpp" />
-    <ClCompile Include="tutorial.cpp" />
-    <ClCompile Include="tutorialAI.cpp" />
-    <ClCompile Include="tutorialUI.cpp" />
-    <ClCompile Include="tutotiallogo.cpp" />
-    <ClCompile Include="wall.cpp" />
+    <ClCompile Include="code\billboard.cpp" />
+    <ClCompile Include="code\bullet.cpp" />
+    <ClCompile Include="code\bulletUI.cpp" />
+    <ClCompile Include="code\camera.cpp" />
+    <ClCompile Include="code\character.cpp" />
+    <ClCompile Include="code\collision.cpp" />
+    <ClCompile Include="code\debugproc.cpp" />
+    <ClCompile Include="code\dispdetection.cpp" />
+    <ClCompile Include="code\displife.cpp" />
+    <ClCompile Include="code\effect.cpp" />
+    <ClCompile Include="code\effectline.cpp" />
+    <ClCompile Include="code\effectsord.cpp" />
+    <ClCompile Include="code\enemy.cpp" />
+    <ClCompile Include="code\enemyBoss.cpp" />
+    <ClCompile Include="code\enemymanager.cpp" />
+    <ClCompile Include="code\enemymedBoss.cpp" />
+    <ClCompile Include="code\enemyweak.cpp" />
+    <ClCompile Include="code\explosion.cpp" />
+    <ClCompile Include="code\fade.cpp" />
+    <ClCompile Include="code\field.cpp" />
+    <ClCompile Include="code\frame.cpp" />
+    <ClCompile Include="code\game.cpp" />
+    <ClCompile Include="code\gameUI.cpp" />
+    <ClCompile Include="code\icon.cpp" />
+    <ClCompile Include="code\impact.cpp" />
+    <ClCompile Include="code\input.cpp" />
+    <ClCompile Include="code\item.cpp" />
+    <ClCompile Include="code\itemicon.cpp" />
+    <ClCompile Include="code\itemslot.cpp" />
+    <ClCompile Include="code\life.cpp" />
+    <ClCompile Include="code\lifegage.cpp" />
+    <ClCompile Include="code\light.cpp" />
+    <ClCompile Include="code\main.cpp" />
+    <ClCompile Include="code\manager.cpp" />
+    <ClCompile Include="code\map.cpp" />
+    <ClCompile Include="code\model.cpp" />
+    <ClCompile Include="code\motion.cpp" />
+    <ClCompile Include="code\number.cpp" />
+    <ClCompile Include="code\object.cpp" />
+    <ClCompile Include="code\object2D.cpp" />
+    <ClCompile Include="code\object3D.cpp" />
+    <ClCompile Include="code\objectMesh.cpp" />
+    <ClCompile Include="code\objectX.cpp" />
+    <ClCompile Include="code\particl.cpp" />
+    <ClCompile Include="code\pause.cpp" />
+    <ClCompile Include="code\player.cpp" />
+    <ClCompile Include="code\ranking.cpp" />
+    <ClCompile Include="code\rankinglogo.cpp" />
+    <ClCompile Include="code\renderer.cpp" />
+    <ClCompile Include="code\result.cpp" />
+    <ClCompile Include="code\score.cpp" />
+    <ClCompile Include="code\shadow.cpp" />
+    <ClCompile Include="code\sky.cpp" />
+    <ClCompile Include="code\slot.cpp" />
+    <ClCompile Include="code\sound.cpp" />
+    <ClCompile Include="code\target.cpp" />
+    <ClCompile Include="code\texture.cpp" />
+    <ClCompile Include="code\time.cpp" />
+    <ClCompile Include="code\title.cpp" />
+    <ClCompile Include="code\titlelogo.cpp" />
+    <ClCompile Include="code\titleUI.cpp" />
+    <ClCompile Include="code\tutorial.cpp" />
+    <ClCompile Include="code\tutorialAI.cpp" />
+    <ClCompile Include="code\tutorialUI.cpp" />
+    <ClCompile Include="code\tutoriallogo.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="bulletUI.h" />
-    <ClInclude Include="bg.h" />
-    <ClInclude Include="billboard.h" />
-    <ClInclude Include="block.h" />
-    <ClInclude Include="bullet.h" />
-    <ClInclude Include="camera.h" />
-    <ClInclude Include="character.h" />
-    <ClInclude Include="collision.h" />
-    <ClInclude Include="debugproc.h" />
-    <ClInclude Include="dispdetection.h" />
-    <ClInclude Include="displife.h" />
-    <ClInclude Include="edit.h" />
-    <ClInclude Include="effect.h" />
-    <ClInclude Include="effectline.h" />
-    <ClInclude Include="effectsord.h" />
-    <ClInclude Include="enemy.h" />
-    <ClInclude Include="enemyBoss.h" />
-    <ClInclude Include="enemymanager.h" />
-    <ClInclude Include="enemymedBoss.h" />
-    <ClInclude Include="enemyweak.h" />
-    <ClInclude Include="explosion.h" />
-    <ClInclude Include="fade.h" />
-    <ClInclude Include="field.h" />
-    <ClInclude Include="frame.h" />
-    <ClInclude Include="game.h" />
-    <ClInclude Include="gameUI.h" />
-    <ClInclude Include="icon.h" />
-    <ClInclude Include="impact.h" />
-    <ClInclude Include="input.h" />
-    <ClInclude Include="item.h" />
-    <ClInclude Include="itemicon.h" />
-    <ClInclude Include="itemslot.h" />
-    <ClInclude Include="life.h" />
-    <ClInclude Include="lifegage.h" />
-    <ClInclude Include="light.h" />
-    <ClInclude Include="main.h" />
-    <ClInclude Include="manager.h" />
-    <ClInclude Include="map.h" />
-    <ClInclude Include="message.h" />
-    <ClInclude Include="model.h" />
-    <ClInclude Include="motion.h" />
-    <ClInclude Include="multiplexbg.h" />
-    <ClInclude Include="number.h" />
-    <ClInclude Include="object.h" />
-    <ClInclude Include="object2D.h" />
-    <ClInclude Include="object3D.h" />
-    <ClInclude Include="objectMesh.h" />
-    <ClInclude Include="objectX.h" />
-    <ClInclude Include="particl.h" />
-    <ClInclude Include="pause.h" />
-    <ClInclude Include="player.h" />
-    <ClInclude Include="police.h" />
-    <ClInclude Include="ranking.h" />
-    <ClInclude Include="rankinglogo.h" />
-    <ClInclude Include="renderer.h" />
-    <ClInclude Include="result.h" />
-    <ClInclude Include="score.h" />
-    <ClInclude Include="shadow.h" />
-    <ClInclude Include="sky.h" />
-    <ClInclude Include="slot.h" />
-    <ClInclude Include="sound.h" />
-    <ClInclude Include="target.h" />
-    <ClInclude Include="texture.h" />
-    <ClInclude Include="time.h" />
-    <ClInclude Include="title.h" />
-    <ClInclude Include="titlelogo.h" />
-    <ClInclude Include="titleUI.h" />
-    <ClInclude Include="tutorial.h" />
-    <ClInclude Include="tutorialAI.h" />
-    <ClInclude Include="tutoriallogo.h" />
-    <ClInclude Include="tutorialUI.h" />
-    <ClInclude Include="wall.h" />
+    <ClInclude Include="code\billboard.h" />
+    <ClInclude Include="code\bullet.h" />
+    <ClInclude Include="code\bulletUI.h" />
+    <ClInclude Include="code\camera.h" />
+    <ClInclude Include="code\character.h" />
+    <ClInclude Include="code\collision.h" />
+    <ClInclude Include="code\debugproc.h" />
+    <ClInclude Include="code\dispdetection.h" />
+    <ClInclude Include="code\displife.h" />
+    <ClInclude Include="code\effect.h" />
+    <ClInclude Include="code\effectline.h" />
+    <ClInclude Include="code\effectsord.h" />
+    <ClInclude Include="code\enemy.h" />
+    <ClInclude Include="code\enemyBoss.h" />
+    <ClInclude Include="code\enemymanager.h" />
+    <ClInclude Include="code\enemymedBoss.h" />
+    <ClInclude Include="code\enemyweak.h" />
+    <ClInclude Include="code\explosion.h" />
+    <ClInclude Include="code\fade.h" />
+    <ClInclude Include="code\field.h" />
+    <ClInclude Include="code\frame.h" />
+    <ClInclude Include="code\game.h" />
+    <ClInclude Include="code\gameUI.h" />
+    <ClInclude Include="code\icon.h" />
+    <ClInclude Include="code\impact.h" />
+    <ClInclude Include="code\input.h" />
+    <ClInclude Include="code\item.h" />
+    <ClInclude Include="code\itemicon.h" />
+    <ClInclude Include="code\itemslot.h" />
+    <ClInclude Include="code\life.h" />
+    <ClInclude Include="code\lifegage.h" />
+    <ClInclude Include="code\light.h" />
+    <ClInclude Include="code\main.h" />
+    <ClInclude Include="code\manager.h" />
+    <ClInclude Include="code\map.h" />
+    <ClInclude Include="code\model.h" />
+    <ClInclude Include="code\motion.h" />
+    <ClInclude Include="code\number.h" />
+    <ClInclude Include="code\object.h" />
+    <ClInclude Include="code\object2D.h" />
+    <ClInclude Include="code\object3D.h" />
+    <ClInclude Include="code\objectMesh.h" />
+    <ClInclude Include="code\objectX.h" />
+    <ClInclude Include="code\particl.h" />
+    <ClInclude Include="code\pause.h" />
+    <ClInclude Include="code\player.h" />
+    <ClInclude Include="code\ranking.h" />
+    <ClInclude Include="code\rankinglogo.h" />
+    <ClInclude Include="code\renderer.h" />
+    <ClInclude Include="code\result.h" />
+    <ClInclude Include="code\score.h" />
+    <ClInclude Include="code\shadow.h" />
+    <ClInclude Include="code\sky.h" />
+    <ClInclude Include="code\slot.h" />
+    <ClInclude Include="code\sound.h" />
+    <ClInclude Include="code\target.h" />
+    <ClInclude Include="code\texture.h" />
+    <ClInclude Include="code\time.h" />
+    <ClInclude Include="code\title.h" />
+    <ClInclude Include="code\titlelogo.h" />
+    <ClInclude Include="code\titleUI.h" />
+    <ClInclude Include="code\tutorial.h" />
+    <ClInclude Include="code\tutorialAI.h" />
+    <ClInclude Include="code\tutoriallogo.h" />
+    <ClInclude Include="code\tutorialUI.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="code\ranking.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

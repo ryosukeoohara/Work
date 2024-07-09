@@ -1,16 +1,17 @@
 //===========================================================
 //
-//ポリゴンを出すやつ[bg.h]
-//Author 大原怜将
+// ポリゴンを出すやつ[dispdetection.h]
+// Author 大原怜将
 //
 //===========================================================
 #ifndef _DISPDETECTION_H_             //このマクロ定義がされてなかったら
 #define _DISPDETECTION_H_             //2重インクルード防止のマクロ定義をする
 
 #include "object3D.h"
-#include "itemslot.h"
 
-//背景クラス
+//===========================================================
+// クラス定義
+//===========================================================
 class CDISPDETECTION : public CObject3D
 {
 public:
@@ -34,7 +35,6 @@ public:
 	static CDISPDETECTION *Create(D3DXVECTOR3 pos);  //生成
 
 	static CDISPDETECTION *GetFrame(void) { return m_DispDetection; }
-	void SetACType(CDISPDETECTION::TYPE type) { m_type = type; }
 	CDISPDETECTION::TYPE GetACType(void) { return m_type; }
 
 private:

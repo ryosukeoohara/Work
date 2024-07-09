@@ -1,7 +1,7 @@
 //===========================================================
 //
-//ポリゴンを出すやつ[player.cpp]
-//Author 大原怜将
+// プレイヤー処理[player.cpp]
+// Author 大原怜将
 //
 //===========================================================
 #include "main.h"
@@ -16,7 +16,6 @@
 #include "enemyweak.h"
 #include "effect.h"
 #include "debugproc.h"
-#include "block.h"
 #include "texture.h"
 #include "motion.h"
 #include "camera.h"
@@ -835,15 +834,6 @@ void CPlayer::ControlPlayer(void)
 			//移動量を更新(減衰させる)--------------------------------------------
 			m_move.x += (0.0f - m_move.x) * 0.1f;
 			m_move.z += (0.0f - m_move.z) * 0.1f;
-
-			if (pEnemy != NULL)
-			{
-				//敵との当たり判定
-				if (pCollision->CollsionEnemy(&Playerpos, &m_posOld, PLAYER_X, PLAYER_Z, *pEnemy) == true)
-				{
-
-				}
-			}
 		}
 	}
 

@@ -1,7 +1,7 @@
 //===========================================================
 //
-//ポリゴンを出すやつ[itemslot.cpp]
-//Author 大原怜将
+// ポリゴンを出すやつ[displife.cpp]
+// Author 大原怜将
 //
 //===========================================================
 #include "displife.h"
@@ -123,24 +123,3 @@ void CDispLife::Draw(void)
 
 	CObject2D::Draw();
 }
-
-//===========================================================
-//ライフっ設定
-//===========================================================
-//int CDispLife::SetDispLife(void)
-//{
-//	int nCntDispLife = -1;
-//
-//	for (int nCount = 0; nCount < MAX_DISPLIFE; nCount++)
-//	{
-//		if (m_apObject2D[nCount] == NULL)
-//		{
-//			m_apObject2D[nCount] = CDispLife::Create({ 250.0f,70.0f,0.0f });
-//
-//			nCntDispLife = nCount;
-//			break;
-//		}
-//	}
-//
-//	return nCntDispLife;
-//}

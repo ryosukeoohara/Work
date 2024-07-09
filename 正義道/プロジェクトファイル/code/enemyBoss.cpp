@@ -1,7 +1,7 @@
 //===========================================================
 //
-//ポリゴンを出すやつ[enemy.cpp]
-//Author 大原怜将
+// ボス敵の処理[enemyBoss.cpp]
+// Author 大原怜将
 //
 //===========================================================
 #include "main.h"
@@ -14,7 +14,6 @@
 #include "collision.h"
 #include "debugproc.h"
 #include "item.h"
-#include "message.h"
 #include "enemyBoss.h"
 #include "game.h"
 #include "texture.h"

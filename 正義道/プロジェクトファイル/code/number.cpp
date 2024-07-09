@@ -1,7 +1,7 @@
 //===========================================================
 //
-//ポリゴンを出すやつ[number.cpp]
-//Author 大原怜将
+// ナンバー処理[number.cpp]
+// Author 大原怜将
 //
 //===========================================================
 #include "number.h"
@@ -10,7 +10,6 @@
 #include "renderer.h"
 #include "manager.h"
 #include "texture.h"
-#include "multiplexbg.h"
 #include "effect.h"
 #include "time.h"
 #include "score.h"

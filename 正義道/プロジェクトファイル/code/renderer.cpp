@@ -1,7 +1,7 @@
 //===========================================================
 //
-//ポリゴンを出すやつ[renderer.cpp]
-//Author 大原怜将
+// レンダラー処理[renderer.cpp]
+// Author 大原怜将
 //
 //===========================================================
 #include "renderer.h"
@@ -9,7 +9,6 @@
 #include "object2D.h"
 #include "manager.h"
 #include "debugproc.h"
-#include "edit.h"
 #include "input.h"
 #include "fade.h"
 #include "pause.h"
