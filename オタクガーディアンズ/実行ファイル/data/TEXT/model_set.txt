@@ -1,0 +1,50 @@
+SCRIPT			# この行は絶対消さないこと！
+
+#==============================================================================
+#
+# 『モデルセット』スクリプトファイル [model_set.txt]
+# Author : 大原怜将
+#
+#==============================================================================
+
+#------------------------------------------------------------------------------
+# モデル数
+#------------------------------------------------------------------------------
+NUM_MODEL = 28
+
+#------------------------------------------------------------------------------
+# モデルファイル名
+#------------------------------------------------------------------------------
+MODEL_FILENAME = data/MODEL/EDIT/block_001.x        	# [0]床
+MODEL_FILENAME = data/MODEL/EDIT/animate_01.x        	# [1]アニメイト
+MODEL_FILENAME = data/MODEL/EDIT/bill_00.x        	    # [2]ビル00
+MODEL_FILENAME = data/MODEL/EDIT/bill_01.x        	    # [3]ビル01
+MODEL_FILENAME = data/MODEL/EDIT/bill_02.x        	    # [4]ビル02
+MODEL_FILENAME = data/MODEL/EDIT/wood.x        	        # [5]木
+MODEL_FILENAME = data/MODEL/EDIT/load.x        	        # [6]道
+MODEL_FILENAME = data/MODEL/EDIT/stand_00.x        	    # [7]暖簾みたいなやつ
+MODEL_FILENAME = data/MODEL/EDIT/stand_01.x        	    # [8]だい
+MODEL_FILENAME = data/MODEL/EDIT/Depart_001.x        	# [9]デパート正面
+MODEL_FILENAME = data/MODEL/EDIT/depart_002.x        	# [10]デパート入口
+MODEL_FILENAME = data/MODEL/EDIT/depart_003.x        	# [11]デパート横
+MODEL_FILENAME = data/MODEL/EDIT/block_002.x        	# [12]壁
+MODEL_FILENAME = data/MODEL/EDIT/block_003.x        	# [13]ブロック
+MODEL_FILENAME = data/MODEL/EDIT/block_004.x        	# [14]ブロック
+MODEL_FILENAME = data/MODEL/EDIT/block_005.x        	# [15]ブロック
+MODEL_FILENAME = data/MODEL/EDIT/block_006.x        	# [16]ブロック
+MODEL_FILENAME = data/MODEL/EDIT/block_007.x        	# [17]ブロック
+MODEL_FILENAME = data/MODEL/EDIT/block_008.x        	# [18]ブロック
+MODEL_FILENAME = data/MODEL/EDIT/saku.x              	# [19]策
+MODEL_FILENAME = data/MODEL/EDIT/load2.x        	    # [20]道2
+MODEL_FILENAME = data/MODEL/EDIT/load3.x        	    # [21]道3
+MODEL_FILENAME = data/MODEL/EDIT/load4.x        	    # [22]道4
+MODEL_FILENAME = data/MODEL/EDIT/load6.x        	    # [23]道5
+MODEL_FILENAME = data/MODEL/EDIT/floor.x        	    # [24]道5
+MODEL_FILENAME = data/MODEL/EDIT/block_009.x            # [25]壁
+MODEL_FILENAME = data/MODEL/EDIT/block_010.x            # [26]道
+MODEL_FILENAME = data/MODEL/EDIT/load7.x                # [27]道
+
+#------------------------------------------------------------------------------
+# モデルの情報
+#------------------------------------------------------------------------------
+END_SCRIPT		# この行は絶対消さないこと！
